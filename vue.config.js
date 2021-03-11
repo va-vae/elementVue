@@ -1,4 +1,10 @@
-const port = process.env.port || process.env.npm_config_port || 8010 // 端口
+const port = 8010 // 端口
+const path = require('path')
+
+function resolve(dir) {
+  return path.join(__dirname, dir)
+}
+const name = '海星的项目'
 module.exports = {
   /** 部署应用包时的基本URL*/
   publicPath: './',
@@ -11,6 +17,13 @@ module.exports = {
   /** 浏览器运行端口*/
   devServer: {
     port: port
-    /*proxy: 'http://localhost:8000'*/
+  },
+  configureWebpack: {
+    name: name,
+    resolve: {
+      alias: {
+        '@': resolve('src')
+      }
+    }
   }
 }
