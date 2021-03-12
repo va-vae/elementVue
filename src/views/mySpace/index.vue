@@ -1,5 +1,5 @@
 <template>
-  <div>这是跳转v后的页面</div>
+  <div>这是跳转后的页面</div>
 </template>
 
 <script>
