@@ -10,7 +10,12 @@ const routes = [{
   meta: { title: '登录' },
   component: (resolve) => require(['@/views/login/index'], resolve),
   hidden: false
-},{
+}, {
+  path: '/Layout',
+  meta: { title: '首页' },
+  component: resolve => require(['@/views/mySpace/index'], resolve)
+},
+  {
   path: '/',
   redirect: '/login'
 }]
