@@ -7,7 +7,7 @@ function resolve(dir) {
 const name = '海星的项目'
 module.exports = {
   /** 部署应用包时的基本URL*/
-  publicPath: './',
+  publicPath: '/',
   /** 在npm run build 时，生成文件的目录名称（默认dist）*/
   outputDir: 'dist',
   /** 用于放置生成的静态资源（js,css,img,fonts）的*/

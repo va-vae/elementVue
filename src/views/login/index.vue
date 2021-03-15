@@ -65,13 +65,15 @@
       /** 获取验证码图片*/
       getCode() {
         getCodeImg().then(res => {
-          this.codeImg = res.data.img
-          this.form.uuid = res.data.uuid
+          this.codeImg = res.img
+          this.form.uuid = res.uuid
         })
       },
       loginIn() {
         login(this.form).then(res => {
+          console.log(res)
           if (res.token !== '') {
+            Cookies.set('token', res.token)
             this.$message({
               message: '登录成功！',
               type: 'success'
