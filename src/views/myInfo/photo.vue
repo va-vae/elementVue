@@ -7,10 +7,11 @@
   export default {
     name: "photo",
     beforeRouteEnter(to, from, next) {
-      if (Cookies.get('token')) {
+      console.log(Cookies.get('token'))
+      if (Cookies.get('token') !== '') {
         next()
-      } else {
-        this.$router.replace('/login')
+      }else {
+        next('/login')
       }
     }
   }
